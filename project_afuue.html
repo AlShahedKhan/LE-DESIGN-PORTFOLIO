@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architektonische Kontraste Basel</title>
+  <script src="https://kit.fontawesome.com/5cc936b617.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+  }
+
+  .main-fullwidth img {
+    padding-top: 50px;
+    width: 100%;
+  }
+
+  .typography img {
+    padding-top: 200px;
+    margin-left: 260px;
+    width: 70%;
+  }
+
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 80px;
+  }
+
+  .title h1 {
+    padding-top: 100px;
+    max-width: 45%;
+    color: #202020;
+    font-family: "Inter", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    margin-left: 290px;
+  }
+
+  .main h1 {
+    font-size: 50px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .main h3 {
+    font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+  }
+
+  .column:first-child {
+    margin-left: 290px;
+  }
+
+  .column h2 {
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .column-content {
+
+    padding-bottom: 10px;
+  }
+
+  .column p {
+    font-size: 13px;
+    line-height: 130%
+  }
+
+  .column-subtitle {
+    float: left;
+    width: 20%;
+  }
+
+  .column-subtitle h1 {
+    padding-top: 50px;
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 200px;
+    margin-left: 210px;
+  }
+
+  .column-subtitle h2 {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 2px;
+    margin-left: 210px;
+    width: 200px;
+  }
+
+  .column-chocolate-text {
+    padding-top: 45px;
+    padding-left: 350px;
+    float: left;
+    width: 55%;
+    line-height: 130%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 159.091%;
+  }
+
+  .images-fullwidth video {
+    padding-top: 200px;
+    width: 100%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .next-project {
+    text-align: right;
+  }
+
+  .next-project a {
+    float: right;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .previous-project {
+    text-align: left;
+    margin-top: -67px;
+  }
+
+  .previous-project a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.7px;
+    bottom: 0;
+    left: 0;
+    top: 26px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .work {
+    overflow: hidden;
+  }
+
+  .works-cited {
+    clear: both;
+    padding-top: 200px;
+    margin-left: 210px;
+  }
+
+  .works-cited h2 {
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px;
+  }
+
+  .works-cited ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .works-cited li {
+    font-size: 13px;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+
+
+  /* --------------------------------------------RESPONSIVE-------------------------------------------- */
+  /* Media Queries for Responsiveness */
+  @media only screen and (max-width: 481px) {
+    .main {
+      padding: 10px;
+    }
+
+
+    .title h1 {
+      max-width: 100%;
+      font-size: 30px;
+      margin-left: 30px;
+      margin-right: 15px;
+      margin-top: -60px;
+    }
+
+
+    .column {
+      float: left;
+      width: 30%;
+      margin-right: 45px;
+
+    }
+
+    .column:first-child {
+      margin-left: 30px;
+    }
+
+    .column h2 {
+      font-size: 15px;
+      font-style: normal;
+      line-height: 5px;
+    }
+
+    .column p {
+      font-size: 13px;
+      line-height: 130%
+    }
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      padding-top: 30px;
+      font-size: 15px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 20px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+
+    .column-chocolate-text {
+      padding-top: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+      float: left;
+      width: 97%;
+      line-height: 130%;
+      font-size: 13px;
+    }
+
+    .images {
+      text-align: center;
+      margin-top: 270px;
+    }
+
+    .images img {
+      height: 200px;
+      object-fit: cover;
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+
+
+    .images-fullwidth video {
+      padding-top: 70px;
+    }
+
+
+    .main-fullwidth img {
+      padding-top: 50px;
+    }
+
+
+    .typography img {
+      padding-top: 70px;
+      margin-left: 6%;
+      width: 90%;
+    }
+
+
+    .images-thirds {
+      text-align: center;
+      margin-top: 230px;
+    }
+
+    .images-thirds img {
+      width: 40%;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .images video {
+      margin-top: -230px;
+      width: 82%;
+      margin-bottom: 70px;
+    }
+
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 180px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    .next-project,
+    .previous-project{
+      text-align: center;
+      margin-top: 40px; /* Reduce the margin for small screens */
+      padding-top: 10px;
+    }
+
+    .previous-project {
+      margin-top: 0px;
+    }
+
+    .next-project h3,
+    .previous-project h3{
+      font-size: 16px; /* Smaller font size for smaller devices */
+    }
+
+    .next-project a,
+    .previous-project a {
+      font-size: 16px; /* Adjust link font size */
+      padding-right: 0; /* Remove any extra padding */
+    }
+
+    .hover-underline-animation i {
+      font-size: 14px; /* Resize the icon */
+    }
+
+    .column-content {
+      padding-bottom: 2px;
+    }
+
+    .works-cited {
+      clear: both;
+      padding-top: 60px;
+      /* Reduced padding for smaller screens */
+      margin-left: 6%;
+      /* Adjusted margin-left to a responsive 10% */
+    }
+  }
+
+  @media only screen and (min-width: 482px) and (max-width: 767px) {
+    .main {
+      padding: 10px;
+    }
+
+    .title h1 {
+      max-width: 75%;
+      font-size: 32px;
+      margin-left: 35px;
+      margin-top: -60px;
+    }
+
+    .column {
+      float: left;
+      width: 30%;
+      margin-right: 60px;
+    }
+
+    .column:first-child {
+      margin-left: 35px;
+    }
+
+    .column h2 {
+      color: #9B9B9B;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5px;
+    }
+
+    .column p {
+      font-size: 13px;
+      line-height: 130%
+    }
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      padding-top: 30px;
+      font-size: 15px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 20px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+
+    .column-chocolate-text {
+      padding-top: 0px;
+      padding-left: 20px;
+      float: left;
+      width: 97%;
+      line-height: 130%;
+      font-size: 13px;
+    }
+
+    .images {
+      text-align: center;
+      margin-top: 270px;
+    }
+
+    /* .images img {
+      height: 200px;
+      object-fit: cover;
+      margin-right: 7px;
+      margin-left: 7px;
+    } */
+
+
+    .images-fullwidth video {
+      padding-top: 70px;
+    }
+
+
+
+    .typography img {
+      padding-top: 70px;
+      margin-left: 5%;
+      width: 70%;
+    }
+
+    .main-fullwidth img {
+      padding-top: 50px;
+      width: 100%;
+    }
+
+    .images-thirds {
+      text-align: center;
+      margin-top: 230px;
+    }
+
+    .images-thirds img {
+      width: 40%;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .images video {
+      margin-top: -230px;
+      width: 82%;
+      margin-bottom: 70px;
+    }
+
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 180px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    .next-project,
+    .previous-project{
+      text-align: right;
+      margin-top: 30px; /* Reduce the margin for small screens */
+      padding-top: 30px;
+    }
+    .previous-project {
+      margin-top: -30px;
+    }
+
+    .next-project h3,
+    .previous-project h3{
+      font-size: 18px; /* Smaller font size for smaller devices */
+    }
+
+    .next-project a,
+    .previous-project a{
+      font-size: 16px; /* Adjust link font size */
+      padding-right: 0; /* Remove any extra padding */
+    }
+
+    .hover-underline-animation i {
+      font-size: 14px; /* Resize the icon */
+    }
+
+    .works-cited {
+      clear: both;
+      padding-top: 70px;
+      /* Reduced padding for smaller screens */
+      margin-left: 5%;
+      /* Adjusted margin-left to a responsive 10% */
+    }
+
+  }
+
+
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .title h1 {
+      padding-top: 80px;
+      max-width: 60%;
+      font-size: 60px;
+      margin-left: 110px;
+    }
+
+    .column {
+      width: 25%;
+    }
+
+    .column:first-child {
+      margin-left: 115px;
+    }
+
+
+    .column-subtitle {
+      float: left;
+      width: 25%;
+    }
+
+    .column-subtitle h1 {
+      font-size: 16px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 25px;
+      margin-left: 20px;
+      width: 200px;
+    }
+
+    .column-chocolate-text {
+      padding-left: 100px;
+      width: 75%;
+    }
+
+    .images-fullwidth video {
+      padding-top: 80px;
+    }
+
+
+    .main-fullwidth img {
+      padding-top: 60px;
+    }
+
+    .typography img {
+      padding-top: 80px;
+      margin-left: 11%;
+      width: 70%;
+    }
+    .works-cited {
+      clear: both;
+      padding-top: 100px;
+      /* Reduced padding for smaller screens */
+      margin-left: 4%;
+      /* Adjusted margin-left to a responsive 10% */
+    }
+
+  }
+
+
+
+  @media only screen and (min-width: 1200px) and (max-width: 1465px) {
+
+    .title h1 {
+      padding-top: 100px;
+      max-width: 45%;
+      font-size: 65px;
+      margin-left: 260px;
+    }
+
+    .column {
+      width: 25%;
+    }
+
+    .column:first-child {
+      margin-left: 270px;
+    }
+
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      font-size: 17px;
+      width: 200px;
+      margin-left: 180px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 28px;
+      margin-left: 180px;
+      width: 200px;
+    }
+
+    .column-chocolate-text {
+      padding-left: 360px;
+      width: 70%;
+    }
+
+    .typography img {
+      padding-top: 100px;
+      margin-left: 240px;
+
+    }
+
+    .images-fullwidth video {
+      padding-top: 100px;
+    }
+
+
+    .main-fullwidth img {
+      padding-top: 60px;
+    }
+
+    .works-cited {
+      clear: both;
+      padding-top: 100px;
+      /* Reduced padding for smaller screens */
+      margin-left: 14%;
+      /* Adjusted margin-left to a responsive 10% */
+    }
+
+
+  }
+
+</style>
+
+<!-- --------------------------------------------Architektonische Kontraste Basel-------------------------------------------- -->
+
+<body>
+  <header>
+    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+        <div class="header-right">
+          <ul id="sidemenu">
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="portfolio.html">Work</a></p>
+            <p><a href="contact.html">Contact</a></p>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="sidemenu">
+      <button class="close-button">&times;</button>
+      <a href="index.html"><img src="images/logo2.png" class="sidemenu-logo"></a>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="portfolio.html">Work</a></p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </header>
+
+  <div class="sidemenu">
+    <p><a href="index.html">Home</a></p>
+    <p><a href="about.html">About</a></p>
+    <p><a href="portfolio.html">Work</a></p>
+    <p><a href="contact.html">Contact</a></p>
+  </div>
+
+  <div class="title">
+    <h1>Architektonische Kontraste Basel</h1>
+    <div class="row">
+      <div class="column">
+        <div class="column-content">
+          <h2>Tools</h2>
+          <p>Adobe Illustrator<br>Adobe After Effects</p>
+        </div>
+        <div class="column-content">
+          <h2>Lecturers</h2>
+          <p>Dirk Koy<br>Marion Fink<br>Fabian Kempter</p>
+        </div>
+        <div class="column-content">
+          <h2>Team</h2>
+          <p>Diana Pelekhai</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-content">
+          <h2>Deliverables</h2>
+          <p>Typographic animation<br>Typographic poster</p>
+        </div>
+        <div>
+          <h2>Details</h2>
+          <p>Bachelor IDCE<br>FHNW Basel<br>2. Semester<br> May 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Die Austellung</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          «Architektonische Kontraste» ist eine Ausstellung über die Entwicklung der Architektur und des urbanen Raums
+          in der Zeitgenossenschaft. Die fiktive Ausstellung wird durch ein Plakat und einen Teaser kommuniziert, wobei
+          beide Produkte die charakteristischen Merkmale eines von insgesamt 13 Bauwerken der Region Basel widerspiegeln
+          sollen. Der Begriff „Kontrast“ steht dabei im Fokus und kann in Bezug auf die Form und/oder Funktion des
+          Gebäudes interpretiert werden. Als Beitrag zu dieser Ausstellung konzentriert sich dieses Projekt auf den
+          Neubau des Amts für Umwelt und Energie des Kantons Basel-Stadt.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main-fullwidth">
+    <img src="images/AFUUE_mockup.jpg">
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Das Bauwerk</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          An der Spiegelgasse 15 in Basel entsteht ein achtgeschossiger, nach Minergie-A-ECO zertifizierter Neubau des
+          Amts für Umwelt und Energie des Kantons Basel-Stadt. Dieser Neubau wurde als Leuchturm für das ökologische und
+          klimagerechte Bauen konzipiert und verfügt über eine allseitige Photovoltaikanlage, die den Strombedarf des
+          Gebäudes ganzjährig deckt. Das Gebäude steht im Zentrum unseres Projekts und bietet durch seine Architektur
+          besondere visuelle und funktionale Kontraste, die für die gestalterische Auseinandersetzung von grosser
+          Bedeutung sind.<br><br>
+
+          Die Bauweise orientiert sich zudem an der traditionellen Holzständerbauweise, was es einzigartig macht. Hinter
+          der Glasfassade präsentiert das Gebäude ein detailliertes Photovoltaik-Mosaik, das rundum emissionsfreien
+          Strom erzeugt. Die Photovoltaikfassade umhüllt den Holz-Beton-Hybridbau und passt sich mit ihren eigens für
+          diesen Standort entwickelten, schimmernden Modulen in den denkmalgeschützten Kontext ein. Durch eine
+          innovative, strukturierte 3D-Oberfläche verändert sich je nach Blickwinkel und Sonneneinstrahlung das
+          Lichtspiel in den reliefartigen Modulen. Diese bestehen aus gehärtetem 3D-Schmelzglas, einem Material, das
+          hier erstmals für Solarpanels eingesetzt wurde.<br><br>
+
+          Architektur: jessenvollenweider architektur<br>
+          Fertigstellungsjahr: 2021<br>
+          Nutzer: das Amt für Umwelt und Energie (AUE) des Kantons Basel-Stadt
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main-fullwidth">
+    <img src="images/afuue_bild2.jpg">
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Das Projekt</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          Ziel ist es, ein stringentes, medienübergreifendes Gestaltungskonzept für die Anwendung in Plakat und Teaser
+          zu entwickeln. Eine typografische Komposition dient als „Keyvisual“ und schafft eine wiedererkennbare
+          grafische Sprache im Zusammenspiel von Print- und Bewegtbild.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="typography">
+    <img src="images/font_afuue.jpg">
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Typography</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          Font: Avenir Next Bold<br>
+          Size: 41.13pt<br>
+          Letter spacing: 80
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="images-fullwidth">
+    <video poster="images/afuue_placeholder.jpg" controls>
+      <source src="images/AfUuE_html5.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Electric Energy</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          Bei der Entwicklung des Keyvisuals wollten wir besonders die Materialität der Gebäude hervorheben.
+          Gleichzeitig war uns auch die Funktionalität sehr wichtig. So entstand die Idee der fliessenden Linien und
+          verzerrten Texte, um den Betrachter an den Energiestrom zu erinnern. Die Idee eines transparenten Plakats kam
+          auf, als wir uns mit den visuellen Aspekten der Gebäude auseinandersetzten. Da das Amt für Umwelt und Energie
+          fast
+          vollständig mit Solarpanelen bedeckt ist, wollten wir dies im Plakat widerspiegeln. Deshalb entschieden wir
+          uns für einen schwarzen Hintergrund mit einem transparenten Rahmen um das Plakat.
+        </p>
+      </div>
+    </div>
+
+    <div class="works-cited">
+      <h2>Works Cited</h2>
+      <ul>
+        <li>https://www.energie-experten.ch/de/wohnen/detail/hybridbau-im-photovoltaik-kleid.html</li>
+        <li>https://referenzplattform.ch/neubau-amt-fuer-umwelt-energie-26323/projekt.html</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="next-project">
+      <h3 class="hover-underline-animation"><a href="project_ramen_instructions.html">Ramen Instructables <i
+            class="fa-solid fa-chevron-right"></i></a></h3>
+    </div>
+    <div class="previous-project">
+      <h3 class="hover-underline-animation"><a href="project_grenzen.html"><i class="fa-solid fa-chevron-left"></i>
+          Grenzen</a></h3>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <p>Copyright © Leila Epprecht 2023</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var sidemenu = document.querySelector('.sidemenu');
+      var closeButton = document.querySelector('.close-button');
+
+      menuToggle.addEventListener('click', function () {
+        console.log("Clicked");
+        sidemenu.classList.toggle('show-sidemenu');
+      });
+
+      closeButton.addEventListener('click', function () {
+        sidemenu.classList.remove('show-sidemenu');
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!sidemenu.contains(event.target) && !menuToggle.contains(event.target)) {
+          sidemenu.classList.remove('show-sidemenu');
+        }
+      });
+    });
+
+  </script>
+
+
+  <script>
+    // When the page is loaded
+    window.onload = function () {
+      // Get the current URL
+      let currentURL = window.location.href;
+
+      // Check if the URL contains '.html'
+      if (currentURL.endsWith('.html')) {
+        // Remove the '.html' part from the URL
+        let newURL = currentURL.replace('.html', '');
+
+        // Use history.pushState to modify the URL without reloading the page
+        window.history.pushState({}, '', newURL);
+      }
+    };
+  </script>
+
+</body>
+
+</html>

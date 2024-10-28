@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona Diaries</title>
+  <script src="https://kit.fontawesome.com/5cc936b617.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+  }
+
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 80px;
+  }
+
+  .title h1 {
+    padding-top: 100px;
+    max-width: 45%;
+    color: #202020;
+    font-family: "Inter", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    margin-left: 290px;
+  }
+
+  .main video {
+    max-width: 50%;
+    height: auto;
+    padding: 2px;
+  }
+
+  .main img {
+    width: 50%;
+    height: auto;
+    padding: 2px;
+  }
+
+
+  .corona-videos video{
+
+    float: left;
+  }
+
+  .main h1 {
+    font-size: 50px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .main h3 {
+    font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+  }
+
+  .column:first-child {
+    margin-left: 290px;
+  }
+
+  .column h2 {
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .column-content {
+
+    padding-bottom: 10px;
+  }
+
+  .column p {
+    font-size: 13px;
+    line-height: 130%
+  }
+
+  .column-subtitle {
+    float: left;
+    width: 20%;
+  }
+
+  .column-subtitle h1 {
+    padding-top: 50px;
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 200px;
+    margin-left: 210px;
+  }
+
+  .column-subtitle h2 {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 2px;
+    margin-left: 210px;
+    width: 200px;
+  }
+
+  .column-chocolate-text {
+    padding-top: 45px;
+    padding-left: 350px;
+    float: left;
+    width: 55%;
+    line-height: 130%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 159.091%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .work video {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .previous-project {
+    text-align: left;
+  }
+
+  .previous-project a {
+    float: left;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.7px;
+    bottom: 0;
+    left: 0;
+    top: 26px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+  /* --------------------------------------------RESPONSIVE-------------------------------------------- */
+  /* Media Queries for Responsiveness */
+  @media only screen and (max-width: 481px) {
+    .main {
+      padding: 10px;
+    }
+
+    .title h1 {
+      max-width: 100%;
+      font-size: 30px;
+      margin-left: 30px;
+      margin-right: 15px;
+      margin-top: -60px;
+    }
+
+
+    .column {
+      float: left;
+      width: 30%;
+      margin-right: 45px;
+
+    }
+
+    .column:first-child {
+      margin-left: 30px;
+    }
+
+    .column h2 {
+      font-size: 15px;
+      font-style: normal;
+      line-height: 5px;
+    }
+
+    .column p {
+      font-size: 13px;
+      line-height: 130%
+    }
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      padding-top: 30px;
+      font-size: 15px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 20px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+
+    .column-chocolate-text {
+      padding-top: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+      float: left;
+      width: 97%;
+      line-height: 130%;
+      font-size: 13px;
+    }
+
+    .images {
+      text-align: center;
+      margin-top: 270px;
+    }
+
+    .images img {
+      height: 200px;
+      object-fit: cover;
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+
+    .main-fullwidth img {
+      padding-top: 60px;
+      width: 100%;
+    }
+
+    .images-thirds {
+      text-align: center;
+      margin-top: 230px;
+    }
+
+    .images-thirds img {
+      width: 40%;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .images video {
+      margin-top: -230px;
+      width: 82%;
+      margin-bottom: 70px;
+    }
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 180px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+
+    .corona-videos video {
+      max-width: 100%; /* Set to 100% width for mobile devices */
+      float: none; /* Disable float to stack items vertically */
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .main img {
+      width: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+
+    }
+
+
+    .previous-project{
+      text-align: center;
+      margin-top: 60px; /* Reduce the margin for small screens */
+      padding-top: 10px;
+    }
+
+
+    .previous-project h3{
+      font-size: 16px; /* Smaller font size for smaller devices */
+    }
+
+    .previous-project a {
+      font-size: 16px; /* Adjust link font size */
+      padding-right: 0; /* Remove any extra padding */
+    }
+    .hover-underline-animation i {
+      font-size: 14px; /* Resize the icon */
+    }
+
+    .column-content {
+      padding-bottom: 2px;
+    }
+
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .main {
+      padding: 10px;
+    }
+
+    .title h1 {
+      max-width: 75%;
+      font-size: 32px;
+      margin-left: 35px;
+      margin-top: -60px;
+    }
+
+    .column {
+      float: left;
+      width: 30%;
+      margin-right: 60px;
+    }
+
+    .column:first-child {
+      margin-left: 35px;
+    }
+
+    .column h2 {
+      color: #9B9B9B;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5px;
+    }
+
+    .column p {
+      font-size: 13px;
+      line-height: 130%
+    }
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      padding-top: 30px;
+      font-size: 15px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 20px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+
+    .column-chocolate-text {
+      padding-top: 0px;
+      padding-left: 20px;
+      float: left;
+      width: 97%;
+      line-height: 130%;
+      font-size: 13px;
+    }
+
+    .images {
+      text-align: center;
+      margin-top: 270px;
+    }
+
+    .images img {
+      height: 200px;
+      object-fit: cover;
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+
+    .main-fullwidth img {
+      padding-top: 70px;
+      width: 100%;
+    }
+
+    .images-thirds {
+      text-align: center;
+      margin-top: 230px;
+    }
+
+    .images-thirds img {
+      width: 40%;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .images video {
+      margin-top: -230px;
+      width: 82%;
+      margin-bottom: 70px;
+    }
+
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 180px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    .next-project {
+      text-align: right;
+      margin-top: 170px; /* Reduce the margin for small screens */
+      padding-top: 60px;
+    }
+
+    .previous-project{
+      text-align: right;
+      margin-top: 40px; /* Reduce the margin for small screens */
+      padding-top: 30px;
+    }
+
+
+    .previous-project h3{
+      font-size: 18px; /* Smaller font size for smaller devices */
+    }
+
+    .previous-project a{
+      font-size: 16px; /* Adjust link font size */
+      padding-right: 0; /* Remove any extra padding */
+    }
+
+    .hover-underline-animation i {
+      font-size: 14px; /* Resize the icon */
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .main {
+      padding-top: 20px;
+
+    }
+
+    .title h1 {
+      padding-top: 80px;
+      max-width: 60%;
+      font-size: 60px;
+      margin-left: 110px;
+    }
+
+    .column {
+      width: 25%;
+    }
+
+    .column:first-child {
+      margin-left: 115px;
+    }
+
+
+    .column-subtitle {
+      float: left;
+      width: 25%;
+    }
+
+    .column-subtitle h1 {
+      font-size: 16px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 25px;
+      margin-left: 20px;
+      width: 200px;
+    }
+
+    .column-chocolate-text {
+      padding-left: 100px;
+      width: 75%;
+    }
+
+
+
+    .main-fullwidth img {
+      padding-top: 80px;
+      width: 100%;
+    }
+
+
+  }
+
+
+  @media only screen and (min-width: 1200px) and (max-width: 1465px) {
+
+    .title h1 {
+      padding-top: 100px;
+      max-width: 45%;
+      font-size: 65px;
+      margin-left: 260px;
+    }
+
+    .column {
+      width: 25%;
+    }
+
+    .column:first-child {
+      margin-left: 270px;
+    }
+
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      font-size: 17px;
+      width: 200px;
+      margin-left: 180px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 28px;
+      margin-left: 180px;
+      width: 200px;
+    }
+
+    .column-chocolate-text {
+      padding-left: 360px;
+      width: 70%;
+    }
+
+
+
+    .main-fullwidth img {
+      padding-top: 80px;
+      width: 100%;
+    }
+
+
+  }
+
+
+
+</style>
+<!-- -------------------------------------------- PROJECT -------------------------------------------- -->
+
+<body>
+  <header>
+    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+        <div class="header-right">
+          <ul id="sidemenu">
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="portfolio.html">Work</a></p>
+            <p><a href="contact.html">Contact</a></p>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="sidemenu">
+        <button class="close-button">&times;</button>
+        <a href="index.html"><img src="images/logo2.png" class="sidemenu-logo"></a>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="portfolio.html">Work</a></p>
+        <p><a href="contact.html">Contact</a></p>
+    </div>
+</header>
+
+  <div class="sidemenu">
+    <p><a href="index.html">Home</a></p>
+    <p><a href="about.html">About</a></p>
+    <p><a href="portfolio.html">Work</a></p>
+    <p><a href="contact.html">Contact</a></p>
+  </div>
+
+  <div class="title">
+    <h1>Corona Diaries</h1>
+    <div class="row">
+      <div class="column">
+        <div class="column-content">
+          <h2>Tools</h2>
+          <p>Adobe Photoshop<br>Adobe After Effects</p>
+        </div>
+        <div class="column-content">
+          <h2>Details</h2>
+          <p>May 2021</p>
+        </div>
+      </div>
+      <div class="column">
+        <h2>Deliverables</h2>
+        <p>Typographic poster<br>Animations</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Pandemic Chronicles</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          "Corona Diaries" is a series of typographic animations reflecting the shared experiences, emotions, and
+          challenges of the global pandemic. Through bold, typographic visuals, the project captures pivotal
+          messages like "Isolate!", "Wash Your Hands", and "What Day Is It?", offering both a reminder of the
+          precautions we lived by and a commentary on the surreal nature of lockdown life. Each animation transforms
+          everyday phrases into dynamic, thought-provoking art, portraying themes of isolation, resilience, and
+          connection during a time of uncertainty.<br><br><br><br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main corona-videos">
+    <video autoplay loop muted poster="images/wash_your_hands_poster.jpg">
+      <source src="images/Wash your hands_html5.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted poster="images/isolate_poster.png">
+      <source src="images/Isolate_html5.mp4" type="video/mp4">
+    </video>
+    <img src="images/what_day_is_it.jpg">
+  </div>
+
+  <div class="main">
+    <div class="previous-project">
+      <h3 class="hover-underline-animation"><a href=project_abgesagt.html><i class="fa-solid fa-chevron-left"></i>
+          ABGESAGT</a></h3>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Copyright © Leila Epprecht 2023</p>
+  </div>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var menuToggle = document.querySelector('.menu-toggle');
+        var sidemenu = document.querySelector('.sidemenu');
+        var closeButton = document.querySelector('.close-button');
+
+        menuToggle.addEventListener('click', function () {
+            console.log("Clicked");
+            sidemenu.classList.toggle('show-sidemenu');
+        });
+
+        closeButton.addEventListener('click', function () {
+            sidemenu.classList.remove('show-sidemenu');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!sidemenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidemenu.classList.remove('show-sidemenu');
+            }
+        });
+    });
+
+  </script>
+
+  <script>
+    // When the page is loaded
+    window.onload = function () {
+      // Get the current URL
+      let currentURL = window.location.href;
+
+      // Check if the URL contains '.html'
+      if (currentURL.endsWith('.html')) {
+        // Remove the '.html' part from the URL
+        let newURL = currentURL.replace('.html', '');
+
+        // Use history.pushState to modify the URL without reloading the page
+        window.history.pushState({}, '', newURL);
+      }
+    };
+  </script>
+
+</body>
+
+</html>

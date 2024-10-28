@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://kit.fontawesome.com/5cc936b617.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- ---------------------------------------------------About Section--------------------------------------------------- -->
+<style>
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .header {
+        animation: fadeIn 1s ease-out;
+    }
+
+    .footer {
+        animation: fadeIn 1s ease-out;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+    }
+
+    .main {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-right: 155px;
+        padding-left: 0px;
+    }
+
+    .footer {
+        padding: 20px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column1 {
+        float: left;
+        width: 45%;
+    }
+
+    .column2 {
+        float: left;
+        width: 25%;
+    }
+
+    .column1 h1 {
+        font-family: "Inter", sans-serif;
+        font-size: 23px;
+        font-weight: 400;
+        color: #000000;
+    }
+
+    .column1 h2 {
+        font-weight: 500;
+        font-size: 13px;
+        color: #6a6a6a;
+    }
+
+
+    .column2 p {
+        font-size: 13px;
+        line-height: 130%;
+    }
+
+    @keyframes staggeredFadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .main {
+        opacity: 0;
+        animation: staggeredFadeIn 0.7s ease-out forwards;
+    }
+
+    .column1 {
+        float: left;
+        width: 45%;
+        animation-delay: 0.1s;
+    }
+
+    .column2 {
+        float: left;
+        width: 25%;
+        animation-delay: 0.5s;
+    }
+
+    .about-column {
+        width: 100%;
+        order: 2;
+        animation-delay: 0.9s;
+        padding-left: 80px;
+    }
+
+    .row {
+        opacity: 0;
+        animation: staggeredFadeIn 0.7s ease-out forwards;
+    }
+
+    .row:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    /* --------------------------------------------ABOUT-------------------------------------------- */
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-description {
+        width: 80%;
+        text-justify: auto;
+    }
+    .about-description p {
+        font-size: 15px;
+        font-family: "Inter", sans-serif;
+        line-height: 130%;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    @media (min-width: 600px) {
+        .row {
+            width: 50%;
+            flex-direction: row;
+        }
+    }
+
+    .tab-titles {
+        display: flex;
+        margin: 10px 0 20px;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+        color: #6a6a6a;
+    }
+
+
+    .tab-links {
+        margin-right: 50px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tab-links::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: #000000;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+    }
+
+    .tab-links:hover::after {
+        width: 80%;
+        transition: 0.5s;
+    }
+
+    .tab-links.active-link::after {
+        width: 70%;
+    }
+
+    .tab-contents ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .tab-contents ul li {
+        list-style: none;
+        margin: 10px 0;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        line-height: 135%;
+    }
+
+    .tab-contents ul li span {
+        font-size: 15px;
+        color: #6a6a6a;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+    }
+
+    .tab-contents {
+        display: none;
+    }
+
+    .tab-contents.active-tab {
+        display: block;
+        margin-top: -20px;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        font-weight: 300;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+
+    /* --------------------------------------------RESPONSIVE-------------------------------------------- */
+    @media only screen and (min-width: 768px) and (max-width: 1440px) {
+        .main {
+            padding-right: 40px;
+            padding-left: 0px;
+        }
+        .row {
+            width: 80%;
+        }
+
+        .column1 {
+            width: 60%;
+            text-align: left;
+        }
+
+        .column1 h1 {
+            font-size: 23px;
+
+        }
+        .column1 h2 {
+            font-size: 13px;
+
+        }
+
+        .about-column {
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        .about-description {
+            width: 100%;
+        }
+        .about-description p {
+            font-size: 15px;
+            line-height: 130%;
+        }
+        .tab-titles {
+            margin: 15px 0 30px;
+            font-size: 15px;
+        }
+        .tab-links {
+            margin-right: 50px;
+        }
+
+        .tab-contents ul li {
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        .tab-contents ul li span {
+            font-size: 15px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .main {
+            padding-top: 30px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .row {
+            width: 90%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .column1 {
+            width: 80%;
+            text-align: left;
+        }
+
+        .column1 h1 {
+            font-size: 21px;
+
+        }
+        .column1 h2 {
+            font-size: 12px;
+
+        }
+
+        .about-column {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        .about-description {
+            width: 100%;
+        }
+        .about-description p {
+            font-size: 13px;
+            line-height: 130%;
+        }
+        .tab-titles {
+            margin: 20px 0 40px;
+            font-size: 13px;
+        }
+        .tab-links {
+            margin-right: 30px;
+        }
+
+        .tab-contents ul li {
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .tab-contents ul li span {
+            font-size: 13px;
+            color: #6a6a6a;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+        }
+
+        .header::after {
+            width: 100%;
+        }
+
+        .footer {
+            padding-top: 50px;
+        }
+
+
+    }
+</style>
+
+<body>
+    <header>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="header">
+            <nav>
+                <a href="/"><img src="images/logo2.png" class="logo"></a>
+                <div class="header-right">
+                    <ul id="sidemenu">
+                        <p><a href="/">Home</a></p>
+                        <p><a href="about.html">About</a></p>
+                        <p><a href="portfolio.html">Work</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="sidemenu">
+        <button class="close-button">&times;</button>
+        <a href="index.html"><img src="images/logo2.png" class="sidemenu-logo"></a>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="portfolio.html">Work</a></p>
+        <p><a href="contact.html">Contact</a></p>
+    </div>
+
+    <div class="main">
+
+    <div class="container">
+        <div class="row">
+            <div class="column1">
+                <h1>Leila Epprecht</h1>
+                <h2>MIXED-MEDIA DESIGNER</h2>
+            </div>
+            <div class="about-column">
+                <div class="about-description">
+                    <p>Leila Epprecht is a multidisciplinary designer specialising in 3D design and animation. Currently
+                        pursuing
+                        a bachelor's degree in Visual Communication and Digital Environments in Basel, she is passionate about
+                        exploring the creative potentials within the digital realm. Having lived in a number of countries as
+                        well
+                        as having a diverse background, she has developed a strong ability to adapt to new environments, which
+                        informs her perspective and provides inspiration for her work. Leila aims to push the boundaries of
+                        digital design, integrating cultural influences to create work that is both unique and impactful.</p>
+                </div>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">SKILLS</p>
+                    <p class="tab-links" onclick="opentab('Education')">EDUCATION</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>VIDEO EDITING & ANIMATION</span><br>Adobe After Effects, Adobe Premiere Pro, DaVinci
+                            Resolve</li>
+                        <li><span>GRAPHIC DESIGN</span><br>Adobe Illustrator, Adobe Photoshop, Adobe InDesign</li>
+                        <li><span>3D DESIGN</span><br>Blender, Rhinoceros 3D</li>
+                        <li><span>UX / UI DESIGN & PROGRAMMING</span><br>HTML, CSS, JavaScript, Figma, Adobe XD</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2021 - 2024</span><br>BA Visual Communication and Digital Spaces<br>University of
+                            Applied Sciences and Arts Northwestern Switzerland
+                        </li>
+                        <li><span>2020 - 2021</span><br>Gestalterisches Propädeutikum<br>Zurich University of the Arts
+                        </li>
+                        <li><span>2017 - 2019</span><br>International Baccalaureate<br>Bilingual Diploma Programme<br>
+                            Vientiane International School Laos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © Leila Epprecht 2023</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuToggle = document.querySelector('.menu-toggle');
+            var sidemenu = document.querySelector('.sidemenu');
+            var closeButton = document.querySelector('.close-button');
+
+            menuToggle.addEventListener('click', function () {
+                console.log("Clicked");
+                sidemenu.classList.toggle('show-sidemenu');
+            });
+
+            closeButton.addEventListener('click', function () {
+                sidemenu.classList.remove('show-sidemenu');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!sidemenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    sidemenu.classList.remove('show-sidemenu');
+                }
+            });
+        });
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+
+
+<script>
+    // Function to navigate between pages and remove '.html' from the URL
+    function navigateTo(page) {
+        // Get the full path without the .html extension
+        const newPath = page.replace('.html', '');
+
+        // Use pushState to update the URL without reloading the page
+        window.history.pushState({}, '', newPath);
+
+        // Load the corresponding page content (this is just a simple example)
+        // In a real application, you might load content dynamically via AJAX or another method
+        loadPageContent(page);
+    }
+
+    // Function to load the page content (replace this with real content loading logic)
+    function loadPageContent(page) {
+        const content = document.getElementById('content');
+        if (page === 'about.html') {
+            content.innerHTML = '<h1>About Page</h1><p>This is the about page content.</p>';
+        } else if (page === 'contact.html') {
+            content.innerHTML = '<h1>Contact Page</h1><p>This is the contact page content.</p>';
+        } else {
+            content.innerHTML = '<h1>Home Page</h1><p>Welcome to the home page.</p>';
+        }
+    }
+
+    // Handle back/forward navigation
+    window.onpopstate = function(event) {
+        const path = window.location.pathname;
+        const page = path.split('/').pop() || 'index.html';  // Default to 'index.html' if the path is empty
+        loadPageContent(page + '.html');
+    };
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABGESAGT</title>
+  <script src="https://kit.fontawesome.com/5cc936b617.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+  }
+
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 80px;
+    overflow: hidden;
+  }
+
+  .title h1 {
+    padding-top: 100px;
+    max-width: 45%;
+    color: #202020;
+    font-family: "Inter", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    margin-left: 290px;
+  }
+
+  .poster-container {
+    clear: both;
+    padding-top: 40px;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+
+  .poster-pair {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .original-posters,
+  .abgesagt-posters {
+    flex: 0 0 auto;
+  }
+
+  .original-posters {
+    margin-right: 190px;
+    width: 18%;
+  }
+
+  .abgesagt-posters {
+    width: 43%;
+  }
+
+  .original-posters img {
+    width: 100%;
+    display: block;
+  }
+
+  .abgesagt-posters img,
+  .abgesagt-posters video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .main h1 {
+    font-size: 50px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .main h3 {
+    font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+  }
+
+  .column:first-child {
+    margin-left: 290px;
+  }
+
+  .column h2 {
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .column-content {
+
+    padding-bottom: 10px;
+  }
+
+  .column p {
+    font-size: 13px;
+    line-height: 130%
+  }
+
+  .column-subtitle {
+    float: left;
+    width: 20%;
+  }
+
+  .column-subtitle h1 {
+    padding-top: 50px;
+    color: #9B9B9B;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 200px;
+    margin-left: 210px;
+  }
+
+  .column-subtitle h2 {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 2px;
+    margin-left: 210px;
+    width: 200px;
+  }
+
+  .column-chocolate-text {
+    padding-top: 45px;
+    padding-left: 350px;
+    float: left;
+    width: 55%;
+    line-height: 130%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 159.091%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  .next-project {
+    text-align: right;
+  }
+
+  .next-project a {
+    float: right;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .previous-project {
+    text-align: left;
+    margin-top: -67px;
+  }
+
+  .previous-project a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.7px;
+    bottom: 0;
+    left: 0;
+    top: 26px;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* --------------------------------------------RESPONSIVE-------------------------------------------- */
+  /* Media Queries for Responsiveness */
+  @media only screen and (max-width: 481px) {
+    .main {
+      padding: 10px;
+    }
+
+    .title h1 {
+      max-width: 100%;
+      font-size: 30px;
+      margin-left: 30px;
+      margin-right: 15px;
+      margin-top: -60px;
+    }
+
+
+    .column {
+      float: left;
+      width: 30%;
+      margin-right: 45px;
+
+    }
+
+    .column:first-child {
+      margin-left: 30px;
+    }
+
+    .column h2 {
+      font-size: 15px;
+      font-style: normal;
+      line-height: 5px;
+    }
+
+    .column p {
+      font-size: 13px;
+      line-height: 130%
+    }
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      padding-top: 30px;
+      font-size: 15px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 20px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+
+    .column-chocolate-text {
+      padding-top: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+      float: left;
+      width: 97%;
+      line-height: 130%;
+      font-size: 13px;
+    }
+
+    /* shahed changes */
+    .original-posters {
+      margin-right: 25px;
+      width: 28%;
+    }
+
+    /* shahed changes */
+
+    .images {
+      text-align: center;
+      margin-top: 270px;
+    }
+
+    .images img {
+      height: 200px;
+      object-fit: cover;
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+
+    .main-fullwidth img {
+      padding-top: 60px;
+      width: 100%;
+    }
+
+    .images-thirds {
+      text-align: center;
+      margin-top: 230px;
+    }
+
+    .images-thirds img {
+      width: 40%;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .images video {
+      margin-top: -230px;
+      width: 82%;
+      margin-bottom: 70px;
+    }
+
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 180px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    .next-project,
+    .previous-project{
+      text-align: center;
+      margin-top: 40px; /* Reduce the margin for small screens */
+      padding-top: 10px;
+    }
+
+    .previous-project {
+      margin-top: 0px;
+    }
+
+    .next-project h3,
+    .previous-project h3{
+      font-size: 16px; /* Smaller font size for smaller devices */
+    }
+
+    .next-project a,
+    .previous-project a {
+      font-size: 16px; /* Adjust link font size */
+      padding-right: 0; /* Remove any extra padding */
+    }
+
+    .hover-underline-animation i {
+      font-size: 14px; /* Resize the icon */
+    }
+
+    .column-content {
+      padding-bottom: 2px;
+    }
+
+  }
+
+  @media only screen and (min-width: 482px) and (max-width: 767px) {
+    .main {
+      padding: 10px;
+    }
+
+    .title h1 {
+      max-width: 75%;
+      font-size: 32px;
+      margin-left: 35px;
+      margin-top: -60px;
+    }
+
+    .column {
+      float: left;
+      width: 30%;
+      margin-right: 60px;
+    }
+
+    .column:first-child {
+      margin-left: 35px;
+    }
+
+    .column h2 {
+      color: #9B9B9B;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5px;
+    }
+
+    .column p {
+      font-size: 13px;
+      line-height: 130%
+    }
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      padding-top: 30px;
+      font-size: 15px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 20px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+
+    .column-chocolate-text {
+      padding-top: 0px;
+      padding-left: 20px;
+      float: left;
+      width: 97%;
+      line-height: 130%;
+      font-size: 13px;
+    }
+
+    /* shahed changes */
+    .original-posters {
+      margin-right: 30px;
+      width: 28%;
+    }
+
+    /* shahed changes */
+
+    .images {
+      text-align: center;
+      margin-top: 270px;
+    }
+
+    .images img {
+      height: 200px;
+      object-fit: cover;
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+
+    .main-fullwidth img {
+      padding-top: 70px;
+      width: 100%;
+    }
+
+    .images-thirds {
+      text-align: center;
+      margin-top: 230px;
+    }
+
+    .images-thirds img {
+      width: 40%;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    .images video {
+      margin-top: -230px;
+      width: 82%;
+      margin-bottom: 70px;
+    }
+
+
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 180px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    .next-project,
+    .previous-project{
+      text-align: right;
+      margin-top: 30px; /* Reduce the margin for small screens */
+      padding-top: 30px;
+    }
+    .previous-project {
+      margin-top: -30px;
+    }
+
+    .next-project h3,
+    .previous-project h3{
+      font-size: 18px; /* Smaller font size for smaller devices */
+    }
+
+    .next-project a,
+    .previous-project a{
+      font-size: 16px; /* Adjust link font size */
+      padding-right: 0; /* Remove any extra padding */
+    }
+
+    .hover-underline-animation i {
+      font-size: 14px; /* Resize the icon */
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .title h1 {
+      padding-top: 80px;
+      max-width: 60%;
+      font-size: 60px;
+      margin-left: 110px;
+    }
+
+    .column {
+      width: 25%;
+    }
+
+    .column:first-child {
+      margin-left: 115px;
+    }
+
+
+    .column-subtitle {
+      float: left;
+      width: 25%;
+    }
+
+    .column-subtitle h1 {
+      font-size: 16px;
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 25px;
+      margin-left: 20px;
+      width: 200px;
+    }
+
+    .column-chocolate-text {
+      padding-left: 100px;
+      width: 75%;
+    }
+
+
+
+    .main-fullwidth img {
+      padding-top: 80px;
+      width: 100%;
+    }
+
+    /* shahed changes */
+    .original-posters {
+      margin-right: 60px;
+      width: 28%;
+    }
+
+    /* shahed changes */
+
+
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1465px) {
+
+    .title h1 {
+      padding-top: 100px;
+      max-width: 45%;
+      font-size: 65px;
+      margin-left: 260px;
+    }
+
+    .column {
+      width: 25%;
+    }
+
+    .column:first-child {
+      margin-left: 270px;
+    }
+
+
+    .column-subtitle {
+      float: left;
+      width: 20%;
+    }
+
+    .column-subtitle h1 {
+      font-size: 17px;
+      width: 200px;
+      margin-left: 180px;
+    }
+
+    .column-subtitle h2 {
+      font-size: 28px;
+      margin-left: 180px;
+      width: 200px;
+    }
+
+    .column-chocolate-text {
+      padding-left: 360px;
+      width: 70%;
+    }
+
+
+
+    .main-fullwidth img {
+      padding-top: 80px;
+      width: 100%;
+    }
+
+
+
+  }
+
+
+</style>
+<!-- -------------------------------------------- PROJECT -------------------------------------------- -->
+
+<body>
+  <header>
+    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+        <div class="header-right">
+          <ul id="sidemenu">
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="portfolio.html">Work</a></p>
+            <p><a href="contact.html">Contact</a></p>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="sidemenu">
+      <button class="close-button">&times;</button>
+      <a href="index.html"><img src="images/logo2.png" class="sidemenu-logo"></a>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="about.html">About</a></p>
+      <p><a href="portfolio.html">Work</a></p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </header>
+
+  <div class="sidemenu">
+    <p><a href="index.html">Home</a></p>
+    <p><a href="about.html">About</a></p>
+    <p><a href="portfolio.html">Work</a></p>
+    <p><a href="contact.html">Contact</a></p>
+  </div>
+
+  <div class="title">
+    <h1>ABGESAGT!</h1>
+    <div class="row">
+      <div class="column">
+        <div class="column-content">
+          <h2>Tools</h2>
+          <p>Adobe Photoshop<br>Adobe After Effects</p>
+        </div>
+        <div class="column-content">
+          <h2>Lecturer</h2>
+          <p>Ulrich Binder<br>Kristin Irion</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="column-content">
+          <h2>Deliverables</h2>
+          <p>Animations<br>Posters</p>
+        </div>
+        <div>
+          <h2>Details</h2>
+          <p>Gestalterisches Propädeutikum<br>Zurich University of the Arts<br>1. Semester<br> May 2020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="work">
+      <div class="column-subtitle">
+        <h1>/ 01 CONTEXT</h1>
+        <h2>Aus der Spur</h2>
+      </div>
+      <div class="column-chocolate-text">
+        <p>
+          Das Projekt mit dem Titel „Aus der Spur" stammt aus dem diesjährigen Aufnahmeverfahren für den Bachelor Film
+          an der ZHdK. Die Arbeit soll sich aus persönlichen, gestalterischen Interessen entwickeln und das Thema dient
+          als Sprungbrett für kreative Ansätze.<br><br>
+          Infolge der Pandemie mussten viele Grossveranstaltungen wie Openairs und Konzerte abgesagt werden und die
+          Plakate, die für diese Veranstaltungen im Voraus erstellt wurden, konnten nicht verwendet werden. Ich habe
+          einige dieser Poster ausgewählt und daraus Animationen erstellt, in denen die Absage angekündigt wird.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="poster-container">
+      <div class="poster-pair">
+        <div class="original-posters">
+          <img src="images/fumetto2020_poster.png" alt="Fumetto 2020 Poster">
+        </div>
+        <div class="abgesagt-posters">
+          <video autoplay loop muted>
+            <source src="images/Fumetto_html5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="poster-pair">
+        <div class="original-posters">
+          <img src="images/paleo2020_poster.jpg" alt="Paleo 2020 Poster">
+        </div>
+        <div class="abgesagt-posters">
+          <video autoplay loop muted>
+            <source src="images/Paleo_html5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="poster-pair">
+        <div class="original-posters">
+          <img src="images/summerdays2020_poster.jpg" alt="Summerdays 2020 Poster">
+        </div>
+        <div class="abgesagt-posters">
+          <video autoplay loop muted>
+            <source src="images/Summerdays_html5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="poster-pair">
+        <div class="original-posters">
+          <img src="images/montreux2020_poster.png" alt="Montreux 2020 Poster">
+        </div>
+        <div class="abgesagt-posters">
+          <img src="images/Jazz Festival.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <div class="next-project">
+      <h3 class="hover-underline-animation"><a href=project_corona_diaries.html>Corona Diaries <i
+            class="fa-solid fa-chevron-right"></i></a></h3>
+    </div>
+    <div class="previous-project">
+      <h3 class="hover-underline-animation"><a href=project_technorama@home.html><i
+            class="fa-solid fa-chevron-left"></i> Technorama @ Home</a></h3>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Copyright © Leila Epprecht 2023</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var sidemenu = document.querySelector('.sidemenu');
+      var closeButton = document.querySelector('.close-button');
+
+      menuToggle.addEventListener('click', function () {
+        console.log("Clicked");
+        sidemenu.classList.toggle('show-sidemenu');
+      });
+
+      closeButton.addEventListener('click', function () {
+        sidemenu.classList.remove('show-sidemenu');
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!sidemenu.contains(event.target) && !menuToggle.contains(event.target)) {
+          sidemenu.classList.remove('show-sidemenu');
+        }
+      });
+    });
+
+  </script>
+
+  <script>
+    // When the page is loaded
+    window.onload = function () {
+      // Get the current URL
+      let currentURL = window.location.href;
+
+      // Check if the URL contains '.html'
+      if (currentURL.endsWith('.html')) {
+        // Remove the '.html' part from the URL
+        let newURL = currentURL.replace('.html', '');
+
+        // Use history.pushState to modify the URL without reloading the page
+        window.history.pushState({}, '', newURL);
+      }
+    };
+  </script>
+
+</body>
+
+</html>

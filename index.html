@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leila Epprecht</title>
+  <script src="https://kit.fontawesome.com/5cc936b617.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .header {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .footer {
+    animation: fadeIn 1s ease-out;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: #f4f4f4;
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+  }
+
+  .main {
+    padding-top: 5px;
+    margin: 0;
+  }
+
+  .full-width-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .full-width-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+  }
+
+
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+
+  @keyframes staggeredFadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .images {
+    opacity: 0;
+    animation: staggeredFadeIn 0.7s ease-out forwards;
+  }
+
+  .images:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  .images:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .images:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  /* --------------------------------------------RESPONSIVE-------------------------------------------- */
+  @media only screen and (max-width: 767px) {
+
+
+    .main {
+      padding-top: 5px;
+    }
+
+    .full-width-image img {
+      height: 250px;
+    }
+
+    .header::after {
+      width: 100%;
+    }
+
+    .footer {
+      padding-top: 50px;
+    }
+
+
+  }
+</style>
+
+<header>
+  <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+  <div class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+      <div class="header-right">
+        <ul id="sidemenu">
+          <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="portfolio.html">Work</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="sidemenu">
+    <button class="close-button">&times;</button>
+    <a href="index.html"><img src="images/logo2.png" class="sidemenu-logo"></a>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="about.html">About</a></p>
+    <p><a href="portfolio.html">Work</a></p>
+    <p><a href="contact.html">Contact</a></p>
+  </div>
+</header>
+
+<body>
+  <div class="main">
+    <div class="work">
+      <div class="images full-width-image">
+        <img class="fade-in-image" src="images/Home_1_resize.jpg">
+      </div>
+      <div class="images full-width-image">
+        <img class="fade-in-image" src="images/Home_2_resize.jpg">
+      </div>
+      <div class="images full-width-image">
+        <img class="fade-in-image" src="images/Home_3_resize.jpg">
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="footer">
+    <p>Copyright © Leila Epprecht 2023</p>
+  </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuToggle = document.querySelector('.menu-toggle');
+      var sidemenu = document.querySelector('.sidemenu');
+      var closeButton = document.querySelector('.close-button');
+
+      menuToggle.addEventListener('click', function () {
+        console.log("Clicked");
+        sidemenu.classList.toggle('show-sidemenu');
+      });
+
+      closeButton.addEventListener('click', function () {
+        sidemenu.classList.remove('show-sidemenu');
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!sidemenu.contains(event.target) && !menuToggle.contains(event.target)) {
+          sidemenu.classList.remove('show-sidemenu');
+        }
+      });
+    });
+
+
+
+
+  </script>
+    <script>
+      // Function to navigate between pages and remove '.html' from the URL
+      function navigateTo(page) {
+          // Get the full path without the .html extension
+          const newPath = page.replace('.html', '');
+
+          // Use pushState to update the URL without reloading the page
+          window.history.pushState({}, '', newPath);
+
+          // Load the corresponding page content (this is just a simple example)
+          // In a real application, you might load content dynamically via AJAX or another method
+          loadPageContent(page);
+      }
+
+      // Function to load the page content (replace this with real content loading logic)
+      function loadPageContent(page) {
+          const content = document.getElementById('content');
+          if (page === 'about.html') {
+              content.innerHTML = '<h1>About Page</h1><p>This is the about page content.</p>';
+          } else if (page === 'contact.html') {
+              content.innerHTML = '<h1>Contact Page</h1><p>This is the contact page content.</p>';
+          } else {
+              content.innerHTML = '<h1>Home Page</h1><p>Welcome to the home page.</p>';
+          }
+      }
+
+      // Handle back/forward navigation
+      window.onpopstate = function(event) {
+          const path = window.location.pathname;
+          const page = path.split('/').pop() || 'index.html';  // Default to 'index.html' if the path is empty
+          loadPageContent(page + '.html');
+      };
+  </script>
+
+</body>
+
+</html>

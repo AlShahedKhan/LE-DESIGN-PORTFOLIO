@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Population in Switzerland</title>
+    <script src="https://kit.fontawesome.com/5cc936b617.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        font-family: "Inter", sans-serif;
+        margin: 0;
+    }
+
+    .main-fullwidth img {
+        padding-top: 200px;
+        width: 100%;
+    }
+
+    .main {
+        padding: 80px;
+    }
+
+    .title h1 {
+        padding-top: 100px;
+        max-width: 45%;
+        color: #202020;
+        font-family: "Inter", sans-serif;
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.7px;
+        margin-left: 290px;
+    }
+
+    .main h3 {
+        font-size: 20px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+    }
+
+    .images {
+        text-align: center;
+        margin-top: 350px;
+    }
+
+    .images img {
+        height: 620px;
+        object-fit: cover;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .images video {
+        margin-top: -350px;
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+    .images-fullwidth video {
+        width: 100%;
+        margin-bottom: -100px;
+    }
+
+    .images-thirds {
+        text-align: center;
+        margin-top: 280px;
+    }
+
+    .images-thirds img {
+        width: 21%;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 100px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 20%;
+        margin-right: 20px;
+    }
+
+    .column:first-child {
+        margin-left: 290px;
+    }
+
+    .column h2 {
+        color: #9B9B9B;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+    }
+
+    .column-content {
+
+        padding-bottom: 10px;
+    }
+
+    .column p {
+        font-size: 13px;
+        line-height: 130%
+    }
+
+    .column-subtitle {
+        float: left;
+        width: 20%;
+    }
+
+    .column-subtitle h1 {
+        padding-top: 50px;
+        color: #9B9B9B;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 200px;
+        margin-left: 210px;
+    }
+
+    .column-subtitle h2 {
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 2px;
+        margin-left: 210px;
+        width: 200px;
+    }
+
+    .column-chocolate-text {
+        padding-top: 45px;
+        padding-left: 350px;
+        float: left;
+        width: 55%;
+        line-height: 130%;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 159.091%;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .next-project {
+        text-align: right;
+    }
+
+    .next-project a {
+        float: right;
+        padding-right: 10px;
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+    }
+
+    .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1.7px;
+        bottom: 0;
+        left: 0;
+        top: 26px;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s;
+    }
+
+    .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    /* --------------------------------------------RESPONSIVE-------------------------------------------- */
+    /* Media Queries for Responsiveness */
+    @media only screen and (max-width: 481px) {
+        .main {
+            padding: 10px;
+        }
+
+        .title h1 {
+            max-width: 100%;
+            font-size: 30px;
+            margin-left: 30px;
+            margin-right: 15px;
+            margin-top: -60px;
+        }
+
+
+        .column {
+            float: left;
+            width: 30%;
+            margin-right: 45px;
+
+        }
+
+        .column:first-child {
+            margin-left: 30px;
+        }
+
+        .column h2 {
+            font-size: 15px;
+            font-style: normal;
+            line-height: 5px;
+        }
+
+        .column p {
+            font-size: 13px;
+            line-height: 130%
+        }
+
+        .column-subtitle {
+            float: left;
+            width: 20%;
+        }
+
+        .column-subtitle h1 {
+            padding-top: 30px;
+            font-size: 15px;
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        .column-subtitle h2 {
+            font-size: 20px;
+            margin-top: 2px;
+            margin-left: 20px;
+        }
+
+        .column-chocolate-text {
+            padding-top: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
+            float: left;
+            width: 97%;
+            line-height: 130%;
+            font-size: 13px;
+        }
+
+        .images {
+            text-align: center;
+            margin-top: 270px;
+        }
+
+        .images img {
+            height: auto;
+            width: 80%;
+            /* height: 200px;  */
+            object-fit: cover;
+            margin-right: 7px;
+            margin-left: 7px;
+        }
+
+        .images.img2 img {
+            height: auto;
+            width: 80%;
+        }
+
+        /* .images img {
+            height: 200px;
+            object-fit: cover;
+            margin-right: 7px;
+            margin-left: 7px;
+        } */
+
+        .images-fullwidth video {
+            width: 100%;
+            margin-bottom: -180px;
+        }
+
+        .main-fullwidth img {
+            padding-top: 60px;
+            width: 100%;
+        }
+
+        .images-thirds {
+            text-align: center;
+            margin-top: 230px;
+        }
+
+        .images-thirds img {
+            width: 40%;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .images video {
+            margin-top: -230px;
+            width: 82%;
+            margin-bottom: 70px;
+        }
+
+
+        .footer {
+            padding-top: 50px;
+            padding-bottom: 180px;
+            text-align: center;
+            font-weight: 300;
+            font-size: 12px;
+        }
+
+        .next-project,
+        .previous-project{
+            text-align: center;
+            margin-top: 40px; /* Reduce the margin for small screens */
+            padding-top: 10px;
+        }
+
+        .previous-project {
+            margin-top: 0px;
+        }
+
+        .next-project h3,
+        .previous-project h3{
+            font-size: 16px; /* Smaller font size for smaller devices */
+        }
+
+        .next-project a,
+        .previous-project a {
+            font-size: 16px; /* Adjust link font size */
+            padding-right: 0; /* Remove any extra padding */
+        }
+
+        .hover-underline-animation i {
+            font-size: 14px; /* Resize the icon */
+        }
+
+        .column-content {
+            padding-bottom: 2px;
+        }
+
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        .main {
+            padding: 10px;
+        }
+
+        .title h1 {
+            max-width: 75%;
+            font-size: 32px;
+            margin-left: 35px;
+            margin-top: -60px;
+        }
+
+        .column {
+            float: left;
+            width: 30%;
+            margin-right: 60px;
+        }
+
+        .column:first-child {
+            margin-left: 35px;
+        }
+
+        .column h2 {
+            color: #9B9B9B;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 5px;
+        }
+
+        .column p {
+            font-size: 13px;
+            line-height: 130%
+        }
+
+        .column-subtitle {
+            float: left;
+            width: 20%;
+        }
+
+        .column-subtitle h1 {
+            padding-top: 30px;
+            font-size: 15px;
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        .column-subtitle h2 {
+            font-size: 20px;
+            margin-top: 2px;
+            margin-left: 20px;
+        }
+
+        .column-chocolate-text {
+            padding-top: 0px;
+            padding-left: 20px;
+            float: left;
+            width: 97%;
+            line-height: 130%;
+            font-size: 13px;
+        }
+
+        .images {
+            text-align: center;
+            margin-top: 270px;
+        }
+
+        .images img {
+            /* height: 200px; */
+            height: auto;
+            width: 80%;
+
+            object-fit: cover;
+            margin-right: 7px;
+            margin-left: 7px;
+        }
+
+        .images.img2 img {
+            height: auto;
+            width: 80%;
+        }
+
+        .images-fullwidth video {
+            width: 100%;
+            margin-bottom: -180px;
+        }
+
+        .main-fullwidth img {
+            padding-top: 70px;
+            width: 100%;
+        }
+
+        .images-thirds {
+            text-align: center;
+            margin-top: 230px;
+        }
+
+        .images-thirds img {
+            width: 40%;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .images video {
+            margin-top: -230px;
+            width: 82%;
+            margin-bottom: 70px;
+        }
+
+
+        .footer {
+            padding-top: 50px;
+            padding-bottom: 180px;
+            text-align: center;
+            font-weight: 300;
+            font-size: 12px;
+        }
+
+        .next-project,
+        .previous-project{
+            text-align: right;
+            margin-top: 30px; /* Reduce the margin for small screens */
+            padding-top: 30px;
+        }
+        .previous-project {
+            margin-top: -30px;
+        }
+
+        .next-project h3,
+        .previous-project h3{
+            font-size: 18px; /* Smaller font size for smaller devices */
+        }
+
+        .next-project a,
+        .previous-project a{
+            font-size: 16px; /* Adjust link font size */
+            padding-right: 0; /* Remove any extra padding */
+        }
+
+        .hover-underline-animation i {
+            font-size: 14px; /* Resize the icon */
+        }
+
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+        .title h1 {
+            padding-top: 80px;
+            max-width: 60%;
+            font-size: 60px;
+            margin-left: 110px;
+        }
+
+        .column {
+            width: 25%;
+        }
+
+        .column:first-child {
+            margin-left: 115px;
+        }
+
+
+        .column-subtitle {
+            float: left;
+            width: 25%;
+        }
+
+        .column-subtitle h1 {
+            font-size: 16px;
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        .column-subtitle h2 {
+            font-size: 25px;
+            margin-left: 20px;
+            width: 200px;
+        }
+
+        .column-chocolate-text {
+            padding-left: 100px;
+            width: 75%;
+        }
+
+
+
+        .main-fullwidth img {
+            padding-top: 80px;
+            width: 100%;
+        }
+
+        .images img {
+            height: auto;
+            width: 44%;
+        }
+
+        .images.img2 img {
+            height: auto;
+            width: 80%;
+        }
+
+        .images-fullwidth video {
+            width: 100%;
+            margin-bottom: -180px;
+        }
+
+        .images-thirds img {
+            width: 40%;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+
+
+    }
+
+
+    @media only screen and (min-width: 1200px) and (max-width: 1465px) {
+
+        .title h1 {
+            padding-top: 100px;
+            max-width: 45%;
+            font-size: 65px;
+            margin-left: 260px;
+        }
+
+        .column {
+            width: 25%;
+        }
+
+        .column:first-child {
+            margin-left: 270px;
+        }
+
+
+        .column-subtitle {
+            float: left;
+            width: 20%;
+        }
+
+        .column-subtitle h1 {
+            font-size: 17px;
+            width: 200px;
+            margin-left: 180px;
+        }
+
+        .column-subtitle h2 {
+            font-size: 28px;
+            margin-left: 180px;
+            width: 200px;
+        }
+
+        .column-chocolate-text {
+            padding-left: 360px;
+            width: 70%;
+        }
+
+
+
+        .main-fullwidth img {
+            padding-top: 80px;
+            width: 100%;
+        }
+
+
+    }
+
+
+</style>
+
+<!-- -------------------------------------------- PROJECT -------------------------------------------- -->
+
+<body>
+    <header>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="header">
+            <nav>
+                <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+                <div class="header-right">
+                    <ul id="sidemenu">
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="about.html">About</a></p>
+                        <p><a href="portfolio.html">Work</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="sidemenu">
+            <button class="close-button">&times;</button>
+            <a href="index.html"><img src="images/logo2.png" class="sidemenu-logo"></a>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="about.html">About</a></p>
+            <p><a href="portfolio.html">Work</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+    </header>
+
+    <div class="sidemenu">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="portfolio.html">Work</a></p>
+        <p><a href="contact.html">Contact</a></p>
+    </div>
+
+    <div class="title">
+        <h1>Foreign Population Switzerland</h1>
+        <div class="row">
+            <div class="column">
+                <div class="column-content">
+                    <h2>Tools</h2>
+                    <p>ArcGIS<br>Blender<br>Rhinoceros 3D<br>Adobe Illustrator<br>Adobe After
+                        Effects<br>TouchDesigner<br>Arduino
+                    </p>
+                </div>
+                <div class="column-content">
+                    <h2>Lecturers</h2>
+                    <p>Simone Hörler<br>Fabian Kempter</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-content">
+                    <h2>Deliverables</h2>
+                    <p>Interactive 3D-printed model<br>Physical installation in room</p>
+                </div>
+                <div>
+                    <h2>Details</h2>
+                    <p>Bachelor IDCE<br>FHNW Basel<br>5. Semester<br> January 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-fullwidth">
+        <img src="images/Epprecht_Dokumentation_placeholder.jpg">
+    </div>
+
+    <div class="main">
+        <div class="column-subtitle">
+            <h1>/ 01 CONCEPT</h1>
+            <h2>Demographics vs Topography</h2>
+        </div>
+        <div class="column-chocolate-text">
+            <p>
+                Population demographics refer to the statistical study of the structure and characteristics of
+                a population, including factors such as age, gender, ethnicity, income, and more. Overtime,
+                there is a shift in the percentage of foreigners in Switzerland, as well as their origin.
+                In this project, an interactive 3D model of Switzerland is created, which topographically
+                represents the proportion of foreign citizens. The aim is that when the viewer touches the model,
+                information about the region they have touched is projected onto the wall. <br><br>
+
+                Using datasets from the Swiss Federal Statistical Office from 2010 to 2022, the data was organised into
+                percent values at the district level, showing the percentage of permanent and temporary foreign
+                residents, and absolute values (number of individuals), focusing on the number of temporary foreign
+                residents per canton. This method was chosen because the most significant demographic shifts over the
+                years were observed among temporary residents.
+            </p>
+        </div>
+    </div>
+
+    <div class="main-fullwidth">
+        <img src="images/Dok1_edited.jpg">
+    </div>
+
+    <div class="main">
+        <div class="column-subtitle">
+            <h1>/ 02 CONTEXT</h1>
+            <h2>3D Modeling & Printing</h2>
+        </div>
+        <div class="column-chocolate-text">
+            <p>
+                The 3D population model uses the datasets from the latest released statistics (2022). The percentage
+                values of the foreign residents (both permanent and temporary) in Switzerland were calculated at a
+                district level. It is often easier to understand complex information when it is presented in a visual
+                format. Topographic models intuitively convey information and provide geographical context, especially
+                in a country like Switzerland, known for its diverse and mountainous landscapes. This topographic theme
+                is reflected in the 3D model, material, and data visualisations.
+            </p>
+        </div>
+    </div>
+
+    <div class="images">
+        <img src="images/model_1.jpg">
+        <img src="images/model_2.jpg">
+    </div>
+
+    <div class="main-fullwidth">
+        <img src="images/Dok3_edited.jpg">
+    </div>
+
+    <div class="main">
+        <div class="column-subtitle">
+            <h1>/ 03 CONTEXT</h1>
+            <h2>Data Visualisations</h2>
+        </div>
+        <div class="column-chocolate-text">
+            <p>
+                Data from the Swiss Federal Statistical Office was analysed over 12 years for cantons Basel City,
+                Ticino, Geneva, and Valais. For each canton, the maximum value for each citizenship was identified, and
+                the top 15 citizenships with the highest values were selected. This approach highlights the citizenships
+                of temporary foreign residents with the most significant demographic shifts.
+            </p>
+        </div>
+    </div>
+
+    <div class="images-thirds">
+        <img src="images/BS.jpg">
+        <img src="images/GE.jpg">
+        <img src="images/TI.jpg">
+        <img src="images/VS.jpg">
+    </div>
+
+    <div class="images">
+        <video autoplay muted>
+            <source src="images/Foreign_Pop_District_Level_copy.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="images-fullwidth">
+        <video poster="images/Epprecht_Dokumentation_placeholder.jpg" autoplay muted>
+            <source src="images/Epprecht_Dokumentation.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="images img2">
+        <img src="images/IMG_6472_photoshop.jpg">
+        <img src="images/IMG_6453_photoshop.jpg">
+    </div>
+
+
+    <div class="main">
+        <div class="next-project">
+            <h3 class="hover-underline-animation"><a href=project_bean_to_bar.html>Bean to Bar <i
+                        class="fa-solid fa-chevron-right"></i></a></h3>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © Leila Epprecht 2024</p>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuToggle = document.querySelector('.menu-toggle');
+            var sidemenu = document.querySelector('.sidemenu');
+            var closeButton = document.querySelector('.close-button');
+
+            menuToggle.addEventListener('click', function () {
+                console.log("Clicked");
+                sidemenu.classList.toggle('show-sidemenu');
+            });
+
+            closeButton.addEventListener('click', function () {
+                sidemenu.classList.remove('show-sidemenu');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!sidemenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    sidemenu.classList.remove('show-sidemenu');
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        // When the page is loaded
+        window.onload = function () {
+            // Get the current URL
+            let currentURL = window.location.href;
+
+            // Check if the URL contains '.html'
+            if (currentURL.endsWith('.html')) {
+                // Remove the '.html' part from the URL
+                let newURL = currentURL.replace('.html', '');
+
+                // Use history.pushState to modify the URL without reloading the page
+                window.history.pushState({}, '', newURL);
+            }
+        };
+    </script>
+
+</body>
+
+</html>
